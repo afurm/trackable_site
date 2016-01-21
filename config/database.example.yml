@@ -1,0 +1,20 @@
+production: &production
+  adapter: postgresql
+  database: trackable
+  username: trackable_user
+  password: changeme
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test: &test
+  adapter: postgresql
+  database: trackable_test
+  username: trackable_user
+  password: changeme
+
+staging:
+  <<: *production
+
+development:
+  <<: *production
